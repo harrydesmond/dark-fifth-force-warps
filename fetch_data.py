@@ -14,7 +14,7 @@ import urllib.request
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'code'))
 import paths  # noqa: E402
 
-RECORD = os.environ.get('DFW_ZENODO_RECORD', 'XXXXXXX')     # Zenodo record id of the data DOI
+RECORD = os.environ.get('DFW_ZENODO_RECORD', '23343105')     # Zenodo record id of the data DOI
 PARTS = ['signals', 'catalogue', 'measurement', 'selfgravity', 'masking', 'inference', 'results']
 
 

@@ -6,7 +6,7 @@ sector*** [arXiv:XXXX.XXXXX]. The paper bounds a fifth force that acts on dark m
 (95%, fiducial) or < 1.7×10⁻³ once systematic uncertainties are included, for force ranges λ_C ≥ 8 Mpc.
 
 The data products (forward-model predictions, warp measurements, self-gravity calibration, likelihood runs and the
-summary results) are on Zenodo: [DOI 10.5281/zenodo.XXXXXXX]. `fetch_data.py` downloads them into `data/`.
+summary results) are on Zenodo: [doi:10.5281/zenodo.23343105](https://doi.org/10.5281/zenodo.23343105). `fetch_data.py` downloads them into `data/`.
 
 ## Quick start: the paper's numbers and figures from the released products
 
