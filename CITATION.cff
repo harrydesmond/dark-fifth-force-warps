@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "dark-fifth-force-warps"
+authors:
+  - family-names: Desmond
+    given-names: Harry
+  - family-names: Ferreira
+    given-names: Pedro G.
+license: MIT
+repository-code: "https://github.com/harrydesmond/dark-fifth-force-warps"
+preferred-citation:
+  type: article
+  title: "Galactic warps constrain equivalence-principle violation in the dark sector"
+  authors:
+    - family-names: Desmond
+      given-names: Harry
+    - family-names: Ferreira
+      given-names: Pedro G.
+  year: 2026

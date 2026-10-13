@@ -1,0 +1,11 @@
+{
+  "title": "dark-fifth-force-warps: code for Desmond & Ferreira (2026), Galactic warps constrain equivalence-principle violation in the dark sector",
+  "upload_type": "software",
+  "description": "Code for the warp measurement, the self-gravity calibration, the outlier-robust likelihood and every number and figure of Desmond & Ferreira (2026), which bounds a fifth force acting on dark matter but not stars using the warps of edge-on galaxy disks. The data products are in a separate Zenodo record.",
+  "creators": [
+    {"name": "Desmond, Harry", "affiliation": "Institute of Cosmology & Gravitation, University of Portsmouth"},
+    {"name": "Ferreira, Pedro G.", "affiliation": "Astrophysics, University of Oxford"}
+  ],
+  "license": "MIT",
+  "keywords": ["fifth force", "dark sector", "equivalence principle", "interacting dark energy", "galaxy warps", "modified gravity"]
+}

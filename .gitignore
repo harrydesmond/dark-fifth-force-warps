@@ -1,0 +1,5 @@
+data/
+atlas/
+plots/
+__pycache__/
+*.pyc
