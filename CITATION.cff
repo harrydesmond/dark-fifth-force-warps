@@ -4,6 +4,7 @@ title: "dark-fifth-force-warps"
 authors:
   - family-names: Desmond
     given-names: Harry
+    orcid: "https://orcid.org/0000-0003-0685-9791"
   - family-names: Ferreira
     given-names: Pedro G.
 license: MIT
@@ -14,6 +15,7 @@ preferred-citation:
   authors:
     - family-names: Desmond
       given-names: Harry
+      orcid: "https://orcid.org/0000-0003-0685-9791"
     - family-names: Ferreira
       given-names: Pedro G.
   year: 2026
