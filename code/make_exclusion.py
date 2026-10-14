@@ -4,6 +4,8 @@ Left panel  : the measured regime, 0.4 < lambda_C/Mpc < 8.
 Right panel : the effectively-infinite-range regime (m_phi <~ H0) where coupled DE lives.
               Our bound there is the flat continuation of the 8 Mpc value: seed-matched forward-model
               replicates give 12/16/20 Mpc limits of 0.90/0.83/0.76 of the 8 Mpc one.
+The left panel also shows the finite-range 95% bound of Bottaro+ 2025 (PRD 112, 023525), digitised from their Fig. 1
+by digitise_bottaro2025.py into Bottaro2025_fig1_digitised.csv (in this directory).
 Reads results/warp_darksector_bounds_sg.csv (analyse_new.py t sg); writes plots/Exclusion_coupledDE.{pdf,png}.
 """
 import numpy as np
@@ -44,6 +46,11 @@ axL.fill_between(lam, DEF, YHI, color=GREY, alpha=ALPH, lw=0)
 axL.fill_between(lam, dG2, DEF, color=GREY, alpha=0.20, lw=0)
 axL.plot(lam, dG2, color='crimson', lw=2.4, zorder=4)
 axL.plot(lam, DEF, color='k', lw=1.7, zorder=4)
+# Bottaro+ 2025 Fig. 1, solid grey (Planck + BOSS FS + BAO, 95%), digitised; beta there is our Delta G/G_N.
+_b = np.genfromtxt(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Bottaro2025_fig1_digitised.csv'),
+                   delimiter=',', skip_header=3, names=True)
+_s = (_b['lambda_Mpc'] > 0.3) & (_b['lambda_Mpc'] < 10)
+axL.plot(_b['lambda_Mpc'][_s], _b['beta95'][_s], color='#b03a2e', lw=1.8, ls=(0,(6,1.5,1.5,1.5)), zorder=5)
 axL.set_xscale('log'); axL.set_yscale('log')
 axL.set_xlim(0.38, 8.4); axL.set_ylim(YLO, YHI)
 axL.set_xlabel(r'$\lambda_C\ /\ \mathrm{Mpc}$', fontsize=13)
@@ -108,7 +115,8 @@ handles = [Line2D([],[],color='crimson',lw=2.4,label='95% upper bound (warps, un
            Line2D([],[],color='k',lw=1.7,label=r'conservative systematics envelope'),
            Line2D([],[],color='#1f5fbf',marker='o',ls='none',ms=7,label='Clini+ 2026'),
            Line2D([],[],color='#7b4bbf',marker='D',ls='none',ms=6.5,label='Other DESI-related claims'),
-           Line2D([],[],color='#b03a2e',lw=1.6,ls=(0,(4,2)),label='Bottaro+ 2024 (tightest previous)'),
+           Line2D([],[],color='#b03a2e',lw=1.6,ls=(0,(4,2)),label='Bottaro+ 2024 (massless)'),
+           Line2D([],[],color='#b03a2e',lw=1.8,ls=(0,(6,1.5,1.5,1.5)),label='Bottaro+ 2025 (finite range)'),
            Line2D([],[],color='darkorange',marker='v',ls='none',ms=8,label='Previous astrophysical limits'),
            Line2D([],[],color='#0f9b8e',marker='s',ls='none',ms=7,label='Coupled DE fit'),
            Line2D([],[],color='purple',marker='*',ls='none',ms=13,label='Proposed model')]

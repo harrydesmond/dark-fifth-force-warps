@@ -50,7 +50,8 @@ step can be re-run on its own.
 to the column midlines with photon-noise weights, and the direct sum that defines w₁. `measure_all.py <start> <stop>`
 measures a range of catalogue rows in the r and i bands (about 1 s per galaxy). `build_new_w1.py` collects the
 results into `measurement/new_w1.npz` and sets the size-consistency flag. `test_measure.py` checks the estimators on
-synthetic warped, tilted, S-warped and flat disks. `export_w1_table.py` writes the readable `measurement/w1_table.csv`.
+synthetic warped, tilted, S-warped and flat disks, and gives the matched filter's recovery of an |x|^0.5 warp quoted
+in Sec. III. `export_w1_table.py` writes the readable `measurement/w1_table.csv`.
 
 **3. Self-gravity and the suppression factor S_i** (Secs. IV A–B).
 - Halo and profiles: `make_mu.py` computes M_halo(<R_eff)/M★ for every galaxy. `selfgrav.py` solves for the
@@ -87,7 +88,9 @@ set it for every run. Running all groups takes roughly 70 core-hours, most of it
 
 **6. Results.** `analyse_new.py`, `descriptive_sg.py`, `paper_numbers.py` and `calc_screening.py`, as in the quick
 start. `drivers_v4.py 19 fid 1` identifies the galaxies that drive the difference between the masked and unmasked
-sign-free fits (Sec. V).
+sign-free fits (Sec. V). `Bottaro2025_fig1_digitised.csv` is the 95% bound of Bottaro et al. (2025, Phys. Rev. D 112,
+023525) against force range, digitised from their Fig. 1 by `digitise_bottaro2025.py <arXiv:2407.18252 PDF>` (needs
+`pdftoppm`); `make_exclusion.py` draws it in Fig. 3 and `analyse_new.py` interpolates it to 8 Mpc for Table I(c).
 
 ### Where each part of the paper comes from
 
@@ -98,7 +101,7 @@ sign-free fits (Sec. V).
 | Sec. IV A–B: self-gravity, S_i, catalogue artefacts | `selfgrav.py`, `sg_profiles.py`, `calib_sg.py`, `paper_numbers.py`, `descriptive_sg.py` |
 | Sec. IV C–D, Table I(b): likelihood, variations, conservative bound | `lap_run.py`, `analyse_new.py` |
 | Sec. IV D: masking | `gaia_query.py`, `measure_masked.py`, `analyse_new.py` with `DFW_MASKED=1` |
-| Sec. V, Table I(a, c), Fig. 3 | `analyse_new.py`, `make_exclusion.py`, `paper_numbers.py`, `drivers_v4.py` |
+| Sec. V, Table I(a, c), Fig. 3 | `analyse_new.py`, `make_exclusion.py`, `digitise_bottaro2025.py`, `paper_numbers.py`, `drivers_v4.py` |
 | Fig. 2 | `corner_8mpc.py`, `make_corner.py` |
 | Sec. VI: screening | `calc_screening.py`, `descriptive_sg.py`, `lap_run.py t sgtest_screen` |
 | Sec. VII, App. B | `paper_numbers.py` |
