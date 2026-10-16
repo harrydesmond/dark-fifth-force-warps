@@ -167,7 +167,7 @@ for tname in ('screen', 'all', 'signfree', 'signfree_i'):
 _b25 = np.genfromtxt(os.path.join(HERE, 'Bottaro2025_fig1_digitised.csv'), delimiter=',', skip_header=3, names=True)
 b25_8 = 10 ** np.interp(np.log10(8.), np.log10(_b25['lambda_Mpc'][::-1]), np.log10(_b25['beta95'][::-1]))
 lims = [('Bottaro+25 (8 Mpc)', b25_8), ('Bottaro+24 Planck+BOSS', 4.8e-3), ('Archidiacono+22 CMB+BAO', 5.4e-3),
-        ('Bean+08 (10 Mpc)', 0.05), ('Bonvin+25', 0.07), ('Kesden+06', 0.1), ('Zamlung+26', 0.2)]
+        ('Bean+08 (10 Mpc)', 0.05), ('Grimm+25', 0.07), ('Kesden+06', 0.1), ('Zamlung+26', 0.6)]
 claims = [('Clini DR2 BAO', 0.0037, 0.0015), ('Clini DR1 FS', 0.0069, 0.0021), ('Clini FS+BAO', 0.0043, 0.0014),
           ('Bottaro+25', 0.0040, 0.0020), ('Bedroya+25', 0.0050, 0.0020), ('coupled DE |b|=0.03', 2 * 0.03 ** 2, None),
           ('Agrawal c=0.30', 2 * 0.30 ** 2, None)]

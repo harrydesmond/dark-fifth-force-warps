@@ -85,8 +85,8 @@ for x, v, e, lab, c, mk in pts:
 BOTTARO = 4.8e-3
 axR.axhline(BOTTARO, color='#b03a2e', lw=1.6, ls=(0,(4,2)), zorder=5)
 
-lims = [(0.21, 0.07, 'Bonvin+ 2025'), (0.45, 0.10, 'Kesden & Kam. 2006'),
-        (0.69, 0.20, 'Zamlung & Nusser 2026')]
+lims = [(0.21, 0.07, 'Grimm+ 2025'), (0.45, 0.10, 'Kesden & Kam. 2006'),
+        (0.69, 0.60, 'Zamlung & Nusser 2026')]
 for x, v, lab in lims:
     axR.plot(x, v, marker='v', ms=9, color='darkorange', zorder=6)
     axR.plot([x,x], [v, v*0.4], color='darkorange', lw=1.5, zorder=5)
