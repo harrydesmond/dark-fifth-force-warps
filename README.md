@@ -1,7 +1,7 @@
 # dark-fifth-force-warps
 
 Code for **Desmond & Ferreira (2026), *Galactic warps constrain equivalence-principle violation in the dark
-sector*** [arXiv:XXXX.XXXXX]. The paper bounds a fifth force that acts on dark matter but not on stars, of strength
+sector*** [[arXiv:2610.24618](https://arxiv.org/abs/2610.24618)]. The paper bounds a fifth force that acts on dark matter but not on stars, of strength
 ΔG/G_N relative to gravity, using the U-shaped warps such a force induces in edge-on stellar disks: ΔG/G_N < 7.7×10⁻⁴
 (95%, fiducial) or < 1.7×10⁻³ once systematic uncertainties are included, for force ranges λ_C ≥ 8 Mpc.
 
@@ -124,5 +124,5 @@ Matplotlib 3.9.4. Every output checked under both environments agreed to floatin
 
 ## Citation and licence
 
-Please cite Desmond & Ferreira (2026) and, for the forward model and the galaxy sample, Desmond & Ferreira (2020),
+Please cite Desmond & Ferreira (2026), arXiv:2610.24618, and, for the forward model and the galaxy sample, Desmond & Ferreira (2020),
 Phys. Rev. D 102, 104060. Code: MIT licence (`LICENCE`). Data record: CC BY 4.0.

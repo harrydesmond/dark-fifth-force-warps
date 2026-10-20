@@ -19,3 +19,12 @@ preferred-citation:
     - family-names: Ferreira
       given-names: Pedro G.
   year: 2026
+  journal: "arXiv e-prints"
+  url: "https://arxiv.org/abs/2610.24618"
+  identifiers:
+    - type: other
+      value: "arXiv:2610.24618"
+      description: "arXiv identifier"
+    - type: doi
+      value: "10.48550/arXiv.2610.24618"
+      description: "arXiv DOI"
